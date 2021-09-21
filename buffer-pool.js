@@ -26,6 +26,9 @@ class BufferPool extends Readable {
     this.totalBufferLength -= size;
     return super.read(size);
   }
+  _read(size){
+    return super.read(size);
+  }
 
   need(size) {
     const ret = this.totalBufferLength < size;
